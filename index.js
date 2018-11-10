@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
 });
 
 app.post('/*', upload.single('thumb'), async function(req, res) {
-  // TODO: TrY CATCH JSON
+
   let data = null;
   try {
     data = JSON.parse(req.body.payload);
