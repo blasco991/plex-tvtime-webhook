@@ -20,6 +20,10 @@ function parseGuid(guid) {
   };
 }
 
+app.get('/', function (req, res) {
+   res.send("Listening on port", PORT);
+});
+
 app.post('/*', upload.single('thumb'), async function(req, res) {
   // TODO: TrY CATCH JSON
   let data = null;
